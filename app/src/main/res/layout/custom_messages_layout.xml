@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/receiver">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/message_profile_image"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="10dp"
+            android:src="@drawable/profile_image"
+            />
+        <TextView
+            android:id="@+id/receiver_message_text"
+            android:layout_width="192dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="3dp"
+            android:layout_marginTop="10dp"
+            android:layout_toEndOf="@+id/message_profile_image"
+            android:background="@drawable/template1"
+            android:padding="10dp"
+            android:textAlignment="center"
+            android:text="receiver messages here"
+            android:textColor="@android:color/black"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:id="@+id/message_receiver_image_view"
+            android:layout_width="193dp"
+            android:layout_height="200dp"
+            android:maxHeight="70dp"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="42dp"
+            android:layout_marginTop="5dp"
+            android:scaleType="centerCrop" />
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/receiver_time"
+        android:layout_width="176dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/receiver"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="59dp"
+        android:layout_marginLeft="19dp"
+        android:layout_marginTop="-3dp"
+        android:background="@color/colorIncoming"
+        android:text="date and time"
+        android:textAlignment="textEnd"
+        android:textSize="10dp" />
+
+    <RelativeLayout
+        android:id="@+id/sender"
+        android:layout_width="220dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="222dp">
+
+
+        <TextView
+            android:id="@+id/sender_messsage_text"
+            android:layout_width="192dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/template2"
+            android:padding="10dp"
+            android:text="sender messages"
+            android:textColor="@android:color/black"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+
+
+        <ImageView
+            android:id="@+id/message_sender_image_view"
+            android:layout_width="192dp"
+            android:layout_height="200dp"
+            android:layout_alignParentEnd="true"
+            android:layout_marginLeft="3dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="2dp"
+            android:maxHeight="70dp"
+            android:scaleType="centerCrop" />
+
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/sender_time"
+        android:layout_width="173.5dp"
+        android:layout_height="13dp"
+        android:layout_below="@+id/sender"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="222dp"
+        android:layout_marginTop="0dp"
+        android:layout_marginEnd="16dp"
+        android:background="@color/colorOutgoing"
+        android:text="date and time"
+        android:textAlignment="textEnd"
+        android:textSize="10dp" />
+
+    <TextView
+        android:id="@+id/sender_message_icon"
+        android:layout_width="22dp"
+        android:layout_height="19dp"
+        android:layout_below="@+id/sender_time"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="0dp"
+        android:layout_marginEnd="16dp"
+        android:background="@drawable/tic"
+        android:shadowColor="@color/colorOutgoing" />
+
+
+</RelativeLayout>

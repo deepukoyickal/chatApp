@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ChatActivity"
+    android:background="@drawable/background">
+
+    <include
+        android:id="@+id/chat_toolbar"
+        layout="@layout/app_bar_layout">
+    </include>
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/private_messages_list_of_users"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/chat_toolbar"
+        android:layout_above="@+id/myLinearLayout"
+        android:layout_marginBottom="6dp"
+        android:background="@drawable/background"
+        >
+    </androidx.recyclerview.widget.RecyclerView>
+
+
+    <LinearLayout
+        android:id="@+id/myLinearLayout"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/message_box"
+        android:layout_margin="5dp"
+        android:layout_marginBottom="3dp"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/chat_emoji_button"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:padding="4dp"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="5dp"/>
+
+
+        <hani.momanii.supernova_emoji_library.Helper.EmojiconEditText
+            android:id="@+id/input_chat_messages"
+            android:layout_width="190dp"
+            android:layout_height="match_parent"
+            android:imeOptions="actionSend"
+            android:inputType="text"
+            android:background="@android:color/transparent"/>
+
+        <ImageButton
+            android:id="@+id/send_files_btn"
+            android:layout_width="60dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="5dp"
+            android:background="@drawable/message_box"
+            android:src="@drawable/clip_icon" />
+
+
+
+    </LinearLayout>
+    <hani.momanii.supernova_emoji_library.Helper.EmojiconEditText
+        android:id="@+id/emojicon_edit_text2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/myLinearLayout"
+        android:imeOptions="actionSend"
+        android:inputType="text"
+        android:layout_margin="0dp"
+        android:background="@android:color/transparent"/>
+
+    <ImageButton
+        android:id="@+id/send_message_btn"
+        android:layout_width="70dp"
+        android:layout_height="60dp"
+        android:layout_below="@id/emojicon_edit_text2"
+        android:layout_alignParentEnd="true"
+        android:layout_margin="5dp"
+        android:layout_marginStart="0dp"
+        android:layout_toEndOf="@+id/myLinearLayout"
+        android:backgroundTint="@android:color/white"
+        android:src="@drawable/icon_send" />
+
+
+</RelativeLayout>
